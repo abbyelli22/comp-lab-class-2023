@@ -1,0 +1,44 @@
+# This file was created Thu Sep 28 11:23:56 2023
+# Created by:
+#                 :-) GROMACS - gmx rms, 2022.3-plumed_2.8.1 (-:
+# 
+# Executable:   /ext3/apps/gromacs/2022.3/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /ext3/apps/gromacs/2022.3/openmpi/intel
+# Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/Week3/50ns
+# Command line:
+#   gmx_mpi rms -s em.tpr -f md_0_1_50ns_noPBC.xtc -o rmsd_50ns_crystal.xvg -tu ns
+# gmx rms is part of G R O M A C S:
+#
+# GROningen MAchine for Chemical Simulation
+#
+@    title "RMSD"
+@    xaxis  label "Time (ns)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "Backbone after lsq fit to Backbone"
+   0.0000000    0.0348597
+   0.0100000    0.0676533
+   0.0200000    0.0617434
+   0.0300000    0.0668010
+   0.0400000    0.0663517
+   0.0500000    0.0710766
+   0.0600000    0.0780858
+   0.0700000    0.0779065
+   0.0800000    0.0800357
+   0.0900000    0.0904457
+   0.1000000    0.0850841
+   0.1100000    0.0845724
+   0.1200000    0.0836247
+   0.1300000    0.0852079
+   0.1400000    0.0870370
+   0.1500000    0.0876195
+   0.1600000    0.0886583
+   0.1700000    0.0843471
+   0.1800000    0.0923783
+   0.1900000    0.0833510
+   0.2000000    0.0990892
+   0.2100000    0.0954334
+   0.2200000    0.0957693
+   0.2300000    0.0955052
+   0.2400000    0.0974763
+   0.2500000    0.1013798

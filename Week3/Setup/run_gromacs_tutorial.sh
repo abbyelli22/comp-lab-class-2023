@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name=run-gromacs_tutorial
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=4
+#SBATCH --mem=8GB
+#SBATCH --time=04:00:00 
+
+module purge
+module load gromacs/openmpi/intel/2020.4
+
+gmx_mpi mdrun -deffnm npt

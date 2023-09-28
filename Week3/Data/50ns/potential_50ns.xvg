@@ -1,0 +1,50 @@
+# This file was created Thu Sep 28 10:36:22 2023
+# Created by:
+#               :-) GROMACS - gmx energy, 2022.3-plumed_2.8.1 (-:
+# 
+# Executable:   /ext3/apps/gromacs/2022.3/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /ext3/apps/gromacs/2022.3/openmpi/intel
+# Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/Week3/50ns
+# Command line:
+#   gmx_mpi energy -f md_0_1_50ns.edr -o potential_50ns.xvg
+# gmx energy is part of G R O M A C S:
+#
+# GROtesk MACabre and Sinister
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Coul. recip."
+    0.000000  2919.398438
+   10.000000  2867.083252
+   20.000000  2871.506104
+   30.000000  2895.533691
+   40.000000  2912.550781
+   50.000000  2964.949219
+   60.000000  3001.136719
+   70.000000  2912.478516
+   80.000000  2974.471680
+   90.000000  2860.955322
+  100.000000  2910.090820
+  110.000000  2855.839111
+  120.000000  3019.254883
+  130.000000  2944.408691
+  140.000000  2877.728760
+  150.000000  2955.648193
+  160.000000  3014.897949
+  170.000000  2972.475586
+  180.000000  2860.614014
+  190.000000  2986.355957
+  200.000000  2918.710938
+  210.000000  2911.182129
+  220.000000  3004.390137
+  230.000000  2925.001709
+  240.000000  2933.621094
+  250.000000  2959.664062

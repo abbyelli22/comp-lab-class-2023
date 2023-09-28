@@ -1,0 +1,53 @@
+# This file was created Thu Sep 28 11:26:21 2023
+# Created by:
+#               :-) GROMACS - gmx gyrate, 2022.3-plumed_2.8.1 (-:
+# 
+# Executable:   /ext3/apps/gromacs/2022.3/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /ext3/apps/gromacs/2022.3/openmpi/intel
+# Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/Week3/50ns
+# Command line:
+#   gmx_mpi gyrate -s md_0_1_50ns.tpr -f md_0_1_50ns_noPBC.xtc -o gyrate.xvg
+# gmx gyrate is part of G R O M A C S:
+#
+# GROningen Mixture of Alchemy and Childrens' Stories
+#
+@    title "Radius of gyration (total and around axes)"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Rg (nm)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Rg"
+@ s1 legend "Rg\sX\N"
+@ s2 legend "Rg\sY\N"
+@ s3 legend "Rg\sZ\N"
+         0     1.40973      1.2072     1.03145     1.20559
+        10     1.42678     1.22302     1.04199      1.2206
+        20     1.42175     1.21442     1.04445     1.21535
+        30     1.42877     1.21848     1.04485     1.22734
+        40     1.42413     1.21704     1.03841     1.22345
+        50     1.41867     1.20645     1.05242     1.20919
+        60     1.42992      1.2156     1.06551     1.21505
+        70     1.43058     1.21769     1.05604     1.22275
+        80     1.42039     1.20642     1.06364     1.20343
+        90     1.41778     1.19955     1.06568     1.20234
+       100      1.4221     1.19642     1.07257      1.2095
+       110     1.41484      1.1853     1.06854       1.207
+       120     1.42925     1.19689     1.06991     1.22811
+       130      1.4318     1.21342     1.05962     1.22675
+       140     1.43568     1.22021     1.05542      1.2327
+       150     1.43269     1.20818     1.06636     1.22817
+       160      1.4337     1.20916     1.06724     1.22878
+       170     1.42064     1.19405     1.05284     1.22564
+       180     1.43724     1.21413     1.06505     1.23404
+       190     1.43003     1.19732     1.06282     1.23564
+       200     1.43219      1.2181      1.0463     1.23442
+       210     1.42755      1.2183     1.04016     1.22866
+       220     1.43334     1.22937     1.03532      1.2352
+       230      1.4368     1.22755     1.03406     1.24604
+       240     1.42796     1.22333     1.04043     1.22439
+       250     1.42795     1.21949      1.0491     1.22077

@@ -1,0 +1,44 @@
+# This file was created Thu Sep 28 11:19:35 2023
+# Created by:
+#                 :-) GROMACS - gmx rms, 2022.3-plumed_2.8.1 (-:
+# 
+# Executable:   /ext3/apps/gromacs/2022.3/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /ext3/apps/gromacs/2022.3/openmpi/intel
+# Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/Week3/50ns
+# Command line:
+#   gmx_mpi rms -s md_0_1_50ns.tpr -f md_0_1_50ns_noPBC.xtc -o rmsd_50ns.xvg -tu ns
+# gmx rms is part of G R O M A C S:
+#
+# GRowing Old MAkes el Chrono Sweat
+#
+@    title "RMSD"
+@    xaxis  label "Time (ns)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "Backbone after lsq fit to Backbone"
+   0.0000000    0.0004950
+   0.0100000    0.0593306
+   0.0200000    0.0531328
+   0.0300000    0.0582582
+   0.0400000    0.0588958
+   0.0500000    0.0639540
+   0.0600000    0.0711240
+   0.0700000    0.0678080
+   0.0800000    0.0745406
+   0.0900000    0.0851332
+   0.1000000    0.0782343
+   0.1100000    0.0798519
+   0.1200000    0.0752239
+   0.1300000    0.0758415
+   0.1400000    0.0797927
+   0.1500000    0.0813393
+   0.1600000    0.0812012
+   0.1700000    0.0773825
+   0.1800000    0.0894887
+   0.1900000    0.0779120
+   0.2000000    0.0918495
+   0.2100000    0.0876062
+   0.2200000    0.0921490
+   0.2300000    0.0884745
+   0.2400000    0.0908046
+   0.2500000    0.0980847

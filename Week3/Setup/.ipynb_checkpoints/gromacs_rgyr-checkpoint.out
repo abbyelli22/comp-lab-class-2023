@@ -1,0 +1,98 @@
+               :-) GROMACS - gmx grompp, 2022.3-plumed_2.8.1 (-:
+
+Executable:   /ext3/apps/gromacs/2022.3/openmpi/intel/bin/gmx_mpi
+Data prefix:  /ext3/apps/gromacs/2022.3/openmpi/intel
+Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/Week3
+Command line:
+  gmx_mpi grompp -f md_50ns.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group Protein is 4920.79
+Number of degrees of freedom in T-Coupling group non-Protein is 63837.21
+Last frame         -1 time  100.000   
+
+Back Off! I just backed up md_0_1.tpr to ./#md_0_1.tpr.1#
+
+GROMACS reminds you: "If you want to save your child from polio, you can pray or you can inoculate... choose science." (Carl Sagan)
+
+Setting the LD random seed to -246157329
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:   129    Protein residues
+There are: 10636      Water residues
+There are:     8        Ion residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.453 nm
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.035 nm, buffer size 0.035 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.000 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 100 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 44x44x44, spacing 0.158 0.158 0.158
+
+Estimate for the relative computational load of the PME mesh part: 0.28
+
+This run will generate roughly 830 Mb of data
+                :-) GROMACS - gmx mdrun, 2022.3-plumed_2.8.1 (-:
+
+Executable:   /ext3/apps/gromacs/2022.3/openmpi/intel/bin/gmx_mpi
+Data prefix:  /ext3/apps/gromacs/2022.3/openmpi/intel
+Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/Week3
+Command line:
+  gmx_mpi mdrun -deffnm md_0_1_50ns
+
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2022.3-plumed_2.8.1
+Source file: src/gromacs/options/options.cpp (line 177)
+Function:    void gmx::internal::OptionSectionImpl::finish()
+
+Error in user input:
+Invalid input values
+  In option s
+    Required option was not provided, and the default file 'topol' does not
+    exist or is not accessible.
+    The following extensions were tried to complete the file name:
+      .tpr
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------

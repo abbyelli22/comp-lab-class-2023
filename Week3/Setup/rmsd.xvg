@@ -1,0 +1,31 @@
+# This file was created Sun Sep 24 21:24:47 2023
+# Created by:
+#                 :-) GROMACS - gmx rms, 2022.3-plumed_2.8.1 (-:
+# 
+# Executable:   /ext3/apps/gromacs/2022.3/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /ext3/apps/gromacs/2022.3/openmpi/intel
+# Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/Week3
+# Command line:
+#   gmx_mpi rms -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsd.xvg -tu ns
+# gmx rms is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "RMSD"
+@    xaxis  label "Time (ns)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "Backbone after lsq fit to Backbone"
+   0.0000000    0.0004950
+   0.0100000    0.0596186
+   0.0200000    0.0786701
+   0.0300000    0.0677387
+   0.0400000    0.0708695
+   0.0500000    0.0727418
+   0.0600000    0.0838882
+   0.0700000    0.0848701
+   0.0800000    0.0806383
+   0.0900000    0.0766995
+   0.1000000    0.0750347
+   0.1100000    0.0793056
+   0.1200000    0.0826162

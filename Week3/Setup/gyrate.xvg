@@ -1,0 +1,40 @@
+# This file was created Sun Sep 24 21:25:04 2023
+# Created by:
+#               :-) GROMACS - gmx gyrate, 2022.3-plumed_2.8.1 (-:
+# 
+# Executable:   /ext3/apps/gromacs/2022.3/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /ext3/apps/gromacs/2022.3/openmpi/intel
+# Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/Week3
+# Command line:
+#   gmx_mpi gyrate -s md_0_1.tpr -f md_0_1_noPBC.xtc -o gyrate.xvg
+# gmx gyrate is part of G R O M A C S:
+#
+# Grunge ROck MAChoS
+#
+@    title "Radius of gyration (total and around axes)"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Rg (nm)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Rg"
+@ s1 legend "Rg\sX\N"
+@ s2 legend "Rg\sY\N"
+@ s3 legend "Rg\sZ\N"
+         0     1.40973      1.2072     1.03145     1.20559
+        10     1.41841     1.21387     1.04854     1.20451
+        20     1.44218     1.24222     1.04299     1.23645
+        30     1.42873     1.23666     1.02288     1.22758
+        40     1.43055     1.24244     1.01599     1.23169
+        50     1.42409     1.24753     1.00253     1.22256
+        60     1.42881     1.24902      1.0064     1.22886
+        70     1.42243     1.24223    0.995443     1.22987
+        80     1.41238     1.22701    0.989748     1.22658
+        90     1.42592     1.24576    0.994434     1.23519
+       100     1.41469     1.23487    0.987579     1.22576
+       110       1.414     1.22774    0.992539     1.22733
+       120     1.41614     1.22999     1.00032     1.22369
