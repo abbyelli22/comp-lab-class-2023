@@ -1,0 +1,77 @@
+# This file was created Tue Aug  8 10:40:44 2023
+# Created by:
+#                       :-) GROMACS - gmx msd, 2020.4 (-:
+# 
+# Executable:   /share/apps/gromacs/2020.4/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /share/apps/gromacs/2020.4/openmpi/intel
+# Working dir:  /scratch/axe1/waterions_CHARMM36M/gromacs
+# Command line:
+#   gmx_mpi msd -f concat.xtc -s step5_4.tpr -n waterions.ndx -o waterOs.xvg
+# gmx msd is part of G R O M A C S:
+#
+# GRowing Old MAkes el Chrono Sweat
+#
+@    title "Mean Square Displacement"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "MSD (nm\S2\N)"
+@TYPE xy
+# MSD gathered over 5600 ps with 57 restarts
+# Diffusion constants fitted from time 600 to 5000 ps
+# D[      TIP3] = 5.6976 (+/- 0.0544) (1e-5 cm^2/s)
+         0           0
+       100      3.4353
+       200     6.88966
+       300      10.333
+       400     13.7676
+       500     17.2007
+       600     20.6356
+       700     24.0758
+       800     27.5035
+       900     30.9057
+      1000     34.3007
+      1100     37.6881
+      1200     41.0737
+      1300     44.4616
+      1400      47.848
+      1500     51.2455
+      1600     54.6805
+      1700     58.1195
+      1800     61.5762
+      1900     65.0415
+      2000     68.4858
+      2100     71.9332
+      2200     75.3803
+      2300     78.8345
+      2400     82.3008
+      2500      85.757
+      2600     89.2178
+      2700     92.6559
+      2800     96.0894
+      2900     99.5031
+      3000     102.909
+      3100     106.303
+      3200     109.684
+      3300       113.1
+      3400     116.539
+      3500     119.999
+      3600     123.395
+      3700     126.777
+      3800      130.16
+      3900     133.586
+      4000     136.978
+      4100     140.391
+      4200     143.779
+      4300     147.203
+      4400     150.554
+      4500     153.914
+      4600      157.31
+      4700     160.586
+      4800      163.91
+      4900      167.31
+      5000     170.807
+      5100     174.257
+      5200     177.523
+      5300     180.819
+      5400     184.115
+      5500     187.503
+      5600     190.903

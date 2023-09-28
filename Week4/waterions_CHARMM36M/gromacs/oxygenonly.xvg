@@ -1,0 +1,77 @@
+# This file was created Wed Aug  9 11:01:27 2023
+# Created by:
+#                       :-) GROMACS - gmx msd, 2020.4 (-:
+# 
+# Executable:   /share/apps/gromacs/2020.4/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /share/apps/gromacs/2020.4/openmpi/intel
+# Working dir:  /scratch/axe1/waterions_CHARMM36M/gromacs
+# Command line:
+#   gmx_mpi msd -f concat.xtc -s step5_4.tpr -n waterions.ndx -o oxygenonly.xvg
+# gmx msd is part of G R O M A C S:
+#
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+#
+@    title "Mean Square Displacement"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "MSD (nm\S2\N)"
+@TYPE xy
+# MSD gathered over 5600 ps with 57 restarts
+# Diffusion constants fitted from time 600 to 5000 ps
+# D[    System] = 5.6721 (+/- 0.0659) (1e-5 cm^2/s)
+         0           0
+       100     3.42568
+       200     6.86996
+       300     10.3033
+       400     13.7286
+       500      17.152
+       600      20.577
+       700     24.0075
+       800     27.4251
+       900     30.8174
+      1000     34.2031
+      1100     37.5805
+      1200     40.9563
+      1300      44.335
+      1400      47.713
+      1500     51.1017
+      1600     54.5273
+      1700     57.9572
+      1800     61.4023
+      1900     64.8561
+      2000     68.2887
+      2100     71.7227
+      2200      75.155
+      2300     78.5932
+      2400     82.0429
+      2500      85.483
+      2600     88.9294
+      2700     92.3522
+      2800     95.7688
+      2900     99.1655
+      3000     102.553
+      3100     105.933
+      3200     109.299
+      3300     112.697
+      3400     116.118
+      3500     119.559
+      3600     122.936
+      3700     126.297
+      3800     129.661
+      3900     133.068
+      4000      136.44
+      4100     139.834
+      4200     143.202
+      4300     146.607
+      4400      149.94
+      4500     153.284
+      4600     156.662
+      4700     159.924
+      4800     163.234
+      4900      166.62
+      5000     170.105
+      5100     173.547
+      5200     176.807
+      5300     180.086
+      5400      183.37
+      5500     186.742
+      5600     190.118

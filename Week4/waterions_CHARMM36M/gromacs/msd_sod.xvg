@@ -1,0 +1,77 @@
+# This file was created Thu Jul 20 16:05:27 2023
+# Created by:
+#                       :-) GROMACS - gmx msd, 2020.4 (-:
+# 
+# Executable:   /share/apps/gromacs/2020.4/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /share/apps/gromacs/2020.4/openmpi/intel
+# Working dir:  /scratch/axe1/waterions_CHARMM36M/gromacs
+# Command line:
+#   gmx_mpi msd -f concat.xtc -s step5_4.tpr -n waterions.ndx -o msd_sod.xvg
+# gmx msd is part of G R O M A C S:
+#
+# Good gRace! Old Maple Actually Chews Slate
+#
+@    title "Mean Square Displacement"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "MSD (nm\S2\N)"
+@TYPE xy
+# MSD gathered over 5600 ps with 57 restarts
+# Diffusion constants fitted from time 600 to 5000 ps
+# D[       SOD] = 1.3417 (+/- 1.2441) (1e-5 cm^2/s)
+         0           0
+       100     1.43095
+       200     2.76884
+       300     4.15767
+       400      5.6665
+       500     7.05875
+       600     8.37841
+       700     9.65332
+       800     10.8477
+       900     12.1896
+      1000     13.4596
+      1100     14.6365
+      1200     15.8609
+      1300     17.1514
+      1400     18.5593
+      1500     19.9111
+      1600     21.1596
+      1700     22.5168
+      1800     23.6722
+      1900      24.814
+      2000     26.0005
+      2100     27.0714
+      2200     28.1374
+      2300     29.0922
+      2400     29.9628
+      2500     30.7738
+      2600     31.8734
+      2700       32.86
+      2800      33.665
+      2900     34.4499
+      3000     35.0949
+      3100     35.7076
+      3200     36.4883
+      3300     37.1908
+      3400     37.7785
+      3500     38.2735
+      3600     38.7283
+      3700     39.0335
+      3800     39.4843
+      3900     40.1168
+      4000     40.6614
+      4100     41.2633
+      4200     41.9599
+      4300     42.5709
+      4400     42.8472
+      4500     42.5457
+      4600     42.1612
+      4700     42.2453
+      4800     42.2607
+      4900     42.3945
+      5000     43.5039
+      5100     45.3062
+      5200     46.4573
+      5300     46.7832
+      5400     47.5745
+      5500     46.6909
+      5600     43.4052
