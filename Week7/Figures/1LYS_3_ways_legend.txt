@@ -1,0 +1,5 @@
+Legend for 1LYS_3_ways.PNG figure
+
+Blue = PDB crystal structure
+Orange = Alphafold unrelaxed model 1 prediction
+Red = Colab unrelaxed rank 001
