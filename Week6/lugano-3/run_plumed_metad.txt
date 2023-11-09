@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --time=24:00:00
+#SBATCH --nodes=6
+#SBATCH --job-name=plumed_metad
+#SBATCH --mem=16GB
+#SBATCH --tasks-per-node=24
+#SBATCH --cpus-per-task=1
+
+module purge
+module load gromacs-plumed/openmpi/intel/2022.3
+
+srun gmx_mpi mdrun -s step7_1.tpr -deffnm rgyr_AT40_kappa300_50ns -nsteps $TIME -plumed plumed_at40_kappa300_50ns.dat
