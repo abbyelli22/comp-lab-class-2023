@@ -1,0 +1,122 @@
+LAMMPS (15 Sep 2022)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+# 2d WCA system, random initial configuration
+
+#variable density equal 0.5
+#variable density equal $var
+variable initial_temperature equal 3.0
+variable final_temperature equal 0.1
+variable dt equal 0.01
+variable tau equal 100*${dt}
+variable tau equal 100*0.01
+variable thermo_time equal 50000*${dt}
+variable thermo_time equal 50000*0.01
+variable equil_steps equal 50000
+variable run_steps equal 100000
+
+units           lj
+atom_style      atomic
+dimension       2
+
+lattice         sq ${density}
+lattice         sq 1.0
+Lattice spacing in x,y,z = 1 1 1
+region          box block 0 20 0 20 -0.5 0.5
+# number of atom types
+create_box      1 box
+Created orthogonal box = (0 0 -0.5) to (20 20 0.5)
+  2 by 2 by 1 MPI processor grid
+create_atoms    1 box
+Created 400 atoms
+  using lattice units in orthogonal box = (0 0 -0.5) to (20 20 0.5)
+  create_atoms CPU = 0.000 seconds
+mass 1 1.0
+
+velocity all create ${initial_temperature} 12345
+velocity all create 3 12345
+
+pair_style      lj/cut 1.0
+#type_1 type_2 epsilon sigma cutoff
+pair_coeff      1 1 10.0 0.89089871814 1.0
+pair_modify shift yes
+
+timestep ${dt}
+timestep 0.01
+thermo ${thermo_time}
+thermo 500
+
+fix 1 all nvt temp ${initial_temperature} ${initial_temperature} ${tau}
+fix 1 all nvt temp 3 ${initial_temperature} ${tau}
+fix 1 all nvt temp 3 3 ${tau}
+fix 1 all nvt temp 3 3 1
+run ${equil_steps}
+run 50000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 1.3
+  ghost atom cutoff = 1.3
+  binsize = 0.65, bins = 31 31 2
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/2d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 3.049 | 3.049 | 3.049 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   3              0              0              2.9925         2.9925       
+       500   2.9603055      1.8258273      0              4.778732       34.668805    
+      1000   3.3660803      1.3815969      0              4.739262       29.491474    
+      1500   3.0271027      1.7745137      0              4.7940487      34.588493    
+      2000   3.3664268      1.5256838      0              4.8836946      31.50349     
+      2500   2.9879311      1.6711584      0              4.6516197      32.504211    
+      3000   2.9016144      1.8246611      0              4.7190215      33.862554    
+      3500   3.0038591      1.7143255      0              4.710675       33.432607    
+      4000   3.1168087      1.8620585      0              4.9710752      34.911697    
+      4500   2.8724299      1.7530073      0              4.6182561      33.169872    
+      5000   2.9471785      1.5154587      0              4.4552692      30.017989    
+      5500   3.2080467      1.3882842      0              4.5883108      29.06623     
+      6000   3.0828759      1.6386596      0              4.7138284      32.009173    
+      6500   3.5265892      1.491228       0              5.0090007      30.255519    
+      7000   2.8921876      1.4529394      0              4.3378965      30.298469    
+      7500   3.0584659      1.5495651      0              4.6003848      30.764667    
+      8000   2.7455281      1.4460884      0              4.1847527      29.142596    
+      8500   2.9037571      1.643789       0              4.5402867      31.595188    
+      9000   2.9326673      1.6229004      0              4.5482359      31.83107     
+      9500   2.8261385      1.6788853      0              4.4979584      32.080148    
+     10000   2.8557954      1.5350411      0              4.383697       30.216425    
+     10500   2.8570623      1.6606218      0              4.5105415      32.548866    
+     11000   2.8859941      1.431082       0              4.3098611      29.505972    
+     11500   2.8872497      1.664042       0              4.5440736      32.556681    
+     12000   3.0578627      1.7341575      0              4.7843755      32.868489    
+     12500   3.2405043      1.4601472      0              4.6925502      30.565526    
+     13000   3.0098918      1.6368402      0              4.6392073      31.627269    
+     13500   3.0816542      1.3655943      0              4.4395444      29.06124     
+     14000   3.0179556      1.5828267      0              4.5932375      30.730602    
+     14500   3.0706833      1.7947347      0              4.8577412      33.745222    
+     15000   3.0180447      1.5748172      0              4.5853168      31.191255    
+     15500   2.8377947      1.8274249      0              4.6581251      34.068441    
+     16000   2.791754       1.4671963      0              4.2519709      29.227602    
+     16500   2.9493855      1.5512163      0              4.4932283      31.212028    
+     17000   2.8031367      1.5312046      0              4.3273334      30.802337    
+     17500   2.7268207      1.527368       0              4.2473716      30.972994    
+     18000   2.9005604      1.6259055      0              4.5192145      31.64725     
+     18500   2.8668953      1.4438246      0              4.3035526      29.890315    
+     19000   2.9371133      1.7535314      0              4.6833019      33.244495    
+     19500   3.0715735      1.5189541      0              4.5828486      30.329435    
+     20000   2.8733838      1.7119206      0              4.5781209      32.140788    
+     20500   2.9227056      1.504755       0              4.4201539      30.256683    
+     21000   2.8636219      1.6410322      0              4.497495       32.378326    
+     21500   2.8395122      1.5617031      0              4.3941165      30.984248    
+     22000   3.1081743      1.5461002      0              4.6465042      30.801124    
+     22500   3.0640834      1.5988247      0              4.6552479      31.666486    
+     23000   3.2395092      1.5681609      0              4.7995713      31.889846    
+     23500   3.1518907      1.704615       0              4.848626       33.469993    
+     24000   3.0106057      1.3884466      0              4.3915257      28.759551    
+     24500   3.0841883      1.4099079      0              4.4863857      29.683545    
+     25000   2.941757       1.470943       0              4.4053456      29.890909    
+ERROR: Lost atoms: original 400 current 396 (src/thermo.cpp:481)
+Last command: run ${equil_steps}
