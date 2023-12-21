@@ -1,0 +1,31 @@
+# This file was created Wed Dec 20 14:42:00 2023
+# Created by:
+#                      :-) GROMACS - gmx gyrate, 2020.4 (-:
+# 
+# Executable:   /share/apps/gromacs/2020.4/openmpi/intel/bin/gmx_mpi
+# Data prefix:  /share/apps/gromacs/2020.4/openmpi/intel
+# Working dir:  /scratch/work/courses/CHEM-GA-2671-2023fa/students/axe1/comp-lab-class-2023/FinalProj/charmm-gui-0285482339_old/gromacs/pressure_20
+# Command line:
+#   gmx_mpi gyrate -s pressure_20.tpr -f pressure_20.trr -o rgyr_pressure_20_13.rgyr -n msd_index.ndx
+# gmx gyrate is part of G R O M A C S:
+#
+# GRoups of Organic Molecules in ACtion for Science
+#
+@    title "Radius of gyration (total and around axes)"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Rg (nm)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Rg"
+@ s1 legend "Rg\sX\N"
+@ s2 legend "Rg\sY\N"
+@ s3 legend "Rg\sZ\N"
+         0     4.65548     3.31295     3.52037     4.46972
+       100     4.65194     3.31513     3.51054     4.46847
+       200     4.64668     3.32025     3.50284     4.45973
+       300     4.62178     3.31183     3.48457     4.42845
